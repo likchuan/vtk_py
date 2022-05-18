@@ -3,9 +3,9 @@ import vtk_py as vtk_py
 import dolfin as dolfin
 import numpy as np
 
-def extractFeNiCsBiVFacet(ugrid, geometry="BiV"):
+def extractFeNiCsBiVFacet(ugrid, geometry="BiV", tol=1e-2):
 
-	tol = 1e-2
+	#tol = 1e-2
 	
 	#ugrid = vtk_py.readUGrid(meshfilename)
 	
@@ -67,6 +67,8 @@ def extractFeNiCsBiVFacet(ugrid, geometry="BiV"):
 	else:
 		cleanpdata.SetInputData(surf_w_norm)
 	cleanpdata.Update()
+
+	#vtk_py.writePData(cleanpdata.GetOutput(), "/mnt/Github/heArt/91690mesh/test.vtk")
 	
 	connfilter = vtk.vtkPolyDataConnectivityFilter()
 	if(vtk.vtkVersion().GetVTKMajorVersion() < 6):
@@ -115,7 +117,7 @@ def extractFeNiCsBiVFacet(ugrid, geometry="BiV"):
 		bc_pts_range.append([abs(pts.GetBounds()[k+1] - pts.GetBounds()[k]) for k in range(0, 6, 2)])
 
 
-	#vtk_py.writePData(connfilter.GetOutput(), "/home/likchuan/Research/fenicsheartmesh/ellipsoidal/Geometry/test.vtk")
+	#vtk_py.writePData(connfilter.GetOutput(), "/mnt/Github/heArt/91690mesh/test.vtk")
 	
 	print "Total_num_points = ",  tpt
 

@@ -147,9 +147,9 @@ def SetBiVFiber_Quad_PyQ(param):
 		#plot(u, interactive=True)
 	
 		# Dump solution to file in VTK format
-		#newfilename = filename + '.pvd'
-		#file1= File(newfilename)
-		#file1<< u
+		newfilename = "/mnt/Github/heArt/91690mesh/" + filename + '.pvd'
+		file1= File(newfilename)
+		file1<< u
 	
 		#newfilename = filename + 'grad.pvd'
 		#file2 = File(newfilename)

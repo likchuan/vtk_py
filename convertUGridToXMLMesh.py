@@ -21,7 +21,8 @@ def convertUGridToXMLMesh(ugrid):
 
         mesh = dolfin.Mesh()
 	editor = dolfin.MeshEditor()
-	editor.open(mesh, 3, 3)  # top. and geom. dimension are both 2
+	editor.open(mesh, "tetrahedron", 3, 3)  # top. and geom. dimension are both 2
+        print("HERE")
 	editor.init_vertices(num_pts)  # number of vertices
 	editor.init_cells(num_tetra)     # number of cells
 
