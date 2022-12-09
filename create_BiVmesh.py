@@ -35,7 +35,7 @@ def create_BiVmesh(epicutfilename, LVendocutfilename, RVendocutfilename, casenam
 	os.system(cmd)
 	cmd = gmshcmd+" -3 BiV_temp.geo -o " + meshfilename
 	os.system(cmd)
-	cmd = "rm BiV_temp.geo "
+	#cmd = "rm BiV_temp.geo "
 	os.system(cmd)
 
 	ugrid = vtk_py.readUGrid(meshfilename)
