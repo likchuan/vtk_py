@@ -69,12 +69,12 @@ from convertXMLMeshToUGrid		 import *
 from extractFeNiCsBiVFacet               import *
 #from SetBiVFiber			 import *
 #from SetBiVFiber_Quad			 import *
-from SetBiVFiber_Quad_PyQ                import *
+#from SetBiVFiber_Quad_PyQ                import *
 from extractCellFromPData 		 import *
 from readVTI				 import *
 from create_ellipsoidal_LV		 import *
 from addLVfiber				 import *
-from addLVfiber_LDRB			 import *
+#from addLVfiber_LDRB			 import *
 from convertQuadDataToVTK		 import *
 from convertUGridToXMLMesh		 import *
 from Set4ChamberDirection		 import *
@@ -82,8 +82,8 @@ from create_BiVmesh			 import *
 from rotateUGrid			 import *
 #from convertXMLMeshToUGrid2D             import *
 #from SetBiVFiber_Ce			 import *
-from SetBiVFiber_J 			 import *
+#from SetBiVFiber_J 			 import *
 #from SlerpTestJ 			 import *
-from rotatePData_w_axis			 import *
+#from rotatePData_w_axis			 import *
 from convertPDataToXMLMesh		 import *
 from extractUGridBasedOnThreshold	 import *

@@ -9,7 +9,7 @@ Mesh.RemeshAlgorithm = 1; // (0=no split, 1=automatic, 2=automatic only with met
 
 Mesh.RemeshParametrization = 7; // (0=harmonic_circle, 1=conformal_spectral, 2=rbf, 3=harmonic_plane, 4=convex_circle, 5=convex_plane, 6=harmonic square, 7=conformal_fe) (Default=4)
 
-Mesh.Algorithm3D    = 4; // (1=Delaunay, 4=Frontal, 5=Frontal Delaunay, 6=Frontal Hex, 7=MMG3D, 9=R-tree) (Default=1)
+Mesh.Algorithm3D    = 5; // (1=Delaunay, 4=Frontal, 5=Frontal Delaunay, 6=Frontal Hex, 7=MMG3D, 9=R-tree) (Default=1)
 Mesh.Recombine3DAll = 0;
 
 Mesh.Optimize = 1;
@@ -24,9 +24,9 @@ Merge <<Epifilename>>;
 CreateTopology;
 
 ll[] = Line "*";
-L_LV_base = newl; Compound Line(L_LV_base) = ll[2];
-L_RV_base = newl; Compound Line(L_RV_base) = ll[0];
-L_epi_base = newl; Compound Line(L_epi_base) = ll[1];
+L_LV_base = newl; Compound Line(L_LV_base) = ll[0];
+L_RV_base = newl; Compound Line(L_RV_base) = ll[1];
+L_epi_base = newl; Compound Line(L_epi_base) = ll[2];
 // Physical Line("EPI_BASE") = {L_epi_base};
 //Physical Line(0) = {L_epi_base};
 
