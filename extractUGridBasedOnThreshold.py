@@ -3,6 +3,7 @@ from vtk_py import *
 
 def extractUGridBasedOnThreshold(ugrid, arrayname, thresholdval):
 
+        ugrid.GetCellData().SetActiveScalars(arrayname)
 	selectionNode = vtk.vtkSelectionNode();
   	selectionNode.SetFieldType(vtk.vtkSelectionNode.CELL);
 

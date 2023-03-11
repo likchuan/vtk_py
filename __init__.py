@@ -50,6 +50,7 @@ from extract_slice_thickness		 import *
 from clipheart				 import *
 from clipSurfacesForCutLVMesh_PLY        import *
 from readPLY                             import *
+from readOBJ                             import *
 from extract_slice_thickness_LVonly	 import *
 from computeVolume	 		 import *
 from computeRegionsForBiV 		 import *
